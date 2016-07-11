@@ -1,0 +1,65 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!-- You might want to try something fancier: -->
+<!-- html/nunjucks docs: http://mozilla.github.io/nunjucks/ -->
+<!-- jade: http://jade-lang.com/ -->
+<!-- haml: http://haml.info/tutorial.html -->
+<!-- hbs(handlebars): http://handlebarsjs.com/expressions.html -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+     <link rel="stylesheet" href="app/style.css">
+
+  </head>
+  <body>
+     <script src="https://code.jquery.com/jquery-2.2.1.min.js"
+            integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+            crossorigin="anonymous"></script>
+
+ 
+    <header>
+      <h1>
+        How well do you know your team?
+      </h1>
+      <h2 id="teamTitle">
+        Green Bay Packers edition
+      </h2>
+      <h3 id="yourScore">
+      </h3>
+    </header>
+    
+    
+    
+    <div id="chooseTeam">
+      <p id="openingLine">Welcome! Choose a team and test your knowledge!</p>
+      <ul id="teamChoices">
+      </ul>
+    </div>
+    
+    <div id="gameTeam"></div>
+
+   
+    <div>
+      <p id="answerFeedback">
+      </p>
+      <div id="whichQuestionType">
+        <button id = "questionTypeNameButton">Start Game - by Player</button>
+        <button id = "questionTypeNumberButton">Start Game - by Number</button>
+      </div>
+      <p id="questionTitle">
+      </p>
+      <ul id="questionChoices">
+      </ul>
+      <ul id="answerChoices">
+      </ul>
+    </div>
+
+  
+    <!-- Your web-app is https, so your scripts need to be too -->
+    <script src="app/data.js"></script>
+    <script src="app/client.js"></script>
+
+  </body>
+</html>
