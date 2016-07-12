@@ -24,8 +24,8 @@ h1 {
 
 #teamTitle {
   font-size: 40px;
-  background-color: green;
-  color: yellow;
+  background-color: black;
+  color: white;
 }
 
 #answerFeedback {
@@ -43,6 +43,12 @@ h1 {
   color: green;
   column-count: 4;
   list-style-type: none;
+}
+
+#teamChoice .svg{
+    height: 20px;
+    width: 20px;
+    padding: none;
 }
 
 #gameTeam: {
@@ -122,4 +128,3 @@ footer > a {
 .nicejob {
   text-decoration: line-through;
 }
-

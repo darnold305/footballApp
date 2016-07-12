@@ -54,11 +54,14 @@ var questionTypes = [
 
 
 var createTeamList = function(){
-    for (i=0; i<playerArray.length; i++) {
-      team = playerArray[i].Team;
-      if (teamList.indexOf(team) === -1) {
-        teamList.push(team);
-      }
+    for (i=0; i<teamArray.length; i++) {
+        var teamName = teamArray[i].FullName;
+        var teamColorObj = teamColorData.filter(function( obj ) {
+        return obj.name == teamName
+        });
+        var teamLogo = teamColorObj[0].svg
+        teamList.push(
+            {Key: teamName, Logo: teamLogo})
     }
     teamList.sort();
     return teamList;
@@ -69,12 +72,10 @@ var init = function(){
   teamsUl = document.querySelector('#teamChoices');
   for (i=0; i<teamList.length; i++) {
     teamLi = document.createElement('li')
-    teamLiButton = document.createElement('button')
+    teamLi.classList = "teamChoice"
     teamLi.id = i
-    teamLiButton.class = "teamChoice"
-    teamLiButton.textContent = teamList[i]
+    teamLi.innerHTML = teamList[i].Logo;
     teamsUl.appendChild(teamLi);
-    teamLi.appendChild(teamLiButton)
   }
 };
 
@@ -101,13 +102,13 @@ var flashcard = {
     if (answerChoice === "correctAnswer") {
       flashcard.yourScore++
       yourScoreText.textContent = ("Your Score: " + flashcard.yourScore + " / " + currentPlayerArray.length);
-      answerFeedback.textContent = "DING DING DING!";
-      view.clearAnswerChoices();
+      answerFeedback.textContent = "Great Job!";
       //view.isGameComplete(); 
     }
     else {
-      answerFeedback.textContent = "Wrong. Try again."
+      answerFeedback.textContent = "Wrong. Study harder!"
     }
+    view.displayRightAnswer();
   },
 };
 
@@ -122,16 +123,22 @@ var view = {
   chooseTeam: function(teamChoice) {
     $('#chooseTeam').hide();
     $('#gameTeam').show();
-    $('#gameTeam').text("We will play now with: " + teamChoice);
     $('#whichQuestionType').show();
+    var teamKey = teamArray[teamChoice].Key;
     playerArray.forEach( function(player){
-      if (player.Team === teamChoice) {
+      if (player.Team === teamKey) {
         currentPlayerArray.push(player);
       }
     });
+    var teamObj = teamArray.filter(function( obj ) {
+        return obj.Key == teamKey;
+    });
+    $("#teamTitle").text(teamObj[0].FullName);
+    $("#teamTitle").show();
   },
   
   displayQuestion: function(questionType) {
+    $("#answerFeedback").hide();
     flashcard.gameCounter++;
     var whichPlayer = (Math.floor(Math.random() * currentPlayerArray.length));  
     
@@ -169,6 +176,9 @@ var view = {
         if (allAnswerChoices[i] === whichPlayer){
           answerButton.id = "correctAnswer"
         }
+        else {
+            answerButton.classList = "incorrectAnswer"
+        }
         answersUl.appendChild(answerLi);
         answerLi.appendChild(answerButton);
     }
@@ -183,7 +193,14 @@ var view = {
     photoTag.src = photoUrl;
     $('#playerPhoto').append(photoTag);
   },
-  
+    
+  displayRightAnswer: function() {
+    $(".incorrectAnswer").css("color", "gray");
+    $("#correctAnswer").css("background-color","yellow");
+    $("#keepPlaying").show();
+    $("#answerFeedback").show();
+  },
+    
   clearAnswerChoices: function() {
     var answersP = document.querySelector("#questionTitle");
     answersP.innerHTML = '';
@@ -195,6 +212,15 @@ var view = {
   },
   
   setupEventListeners: function() {
+    $('#keepPlayingYes').on('click', function(event){
+        handlers.displayQuestion();
+    });
+      
+    $('#keepPlayingNo').on('click', function(event){
+        $('#gameDiv').empty()
+        $('#gameDiv').text("GAME OVER")
+    });
+      
     var answerChoice = 'wrongAnswer';
     $('#answerChoices').on('click', function(event){
       answerChoice = event.target.id;
@@ -220,8 +246,8 @@ var view = {
     var newUl = document.querySelector('#teamChoices');
     newUl.addEventListener('click', function(event) {
       var teamChoice = '';
-      teamChoice = event.target.parentNode.textContent;
-      if (teamChoice.length < 4) {
+      teamChoice = parseInt(event.target.closest('li').id)
+      if (Number.isInteger(teamChoice)) {
         view.chooseTeam(teamChoice);
       }
     });
@@ -261,4 +287,5 @@ view.setupEventListeners();
 var yourScoreText = document.getElementById("yourScore");
 yourScoreText.textContent = ("Your Score: " + flashcard.yourScore + " / " + currentPlayerArray.length);
 init();
-
+$("#keepPlaying").hide();
+$("#teamTile").hide();

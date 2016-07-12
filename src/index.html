@@ -13,6 +13,7 @@
      <link rel="stylesheet" href="app/style.css">
 
   </head>
+    
   <body>
      <script src="https://code.jquery.com/jquery-2.2.1.min.js"
             integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
@@ -24,26 +25,23 @@
         How well do you know your team?
       </h1>
       <h2 id="teamTitle">
-        Green Bay Packers edition
       </h2>
       <h3 id="yourScore">
       </h3>
     </header>
-    
-    
-    
+      
     <div id="chooseTeam">
       <p id="openingLine">Welcome! Choose a team and test your knowledge!</p>
       <ul id="teamChoices">
       </ul>
     </div>
-    
-    <div id="gameTeam"></div>
+       
+      
+    <div id="gameTeam">
+    </div>
 
    
-    <div>
-      <p id="answerFeedback">
-      </p>
+    <div id="gameDiv">
       <div id="whichQuestionType">
         <button id = "questionTypeNameButton">Start Game - by Player</button>
         <button id = "questionTypeNumberButton">Start Game - by Number</button>
@@ -52,13 +50,21 @@
       </p>
       <ul id="questionChoices">
       </ul>
+      <p id="answerFeedback">
+      </p>
       <ul id="answerChoices">
       </ul>
+        <div id="keepPlaying">
+            <button id="keepPlayingYes">Ask me more!</button>
+            <button id="keepPlayingNo">I'm done for now</button>
+        </div>
     </div>
+    
 
   
     <!-- Your web-app is https, so your scripts need to be too -->
-    <script src="app/data.js"></script>
+    <script src="app/teamData.js"></script>
+    <script src="app/playerData.js"></script>
     <script src="app/client.js"></script>
 
   </body>

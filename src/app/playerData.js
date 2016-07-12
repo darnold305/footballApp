@@ -7950,14 +7950,14 @@ var playerArray = [
     "PhotoUrl": "http://static.fantasydata.com/headshots/nfl/low-res/14505.png"
   },
   {
-    "PlayerID": 14512,
+    "PlayerID": 14100,
     "Team": "CAR",
     "Number": 39,
     "Name": "Trenton Robinson",
     "Position": "FS",
     "College": "Michigan State",
     "Active": true,
-    "PhotoUrl": "http://static.fantasydata.com/headshots/nfl/low-res/14512.png"
+    "PhotoUrl": "http://static.fantasydata.com/headshots/nfl/low-res/14100.png"
   },
   {
     "PlayerID": 14519,
@@ -10190,84 +10190,84 @@ var playerArray = [
     "PhotoUrl": "http://static.fantasydata.com/headshots/nfl/low-res/15118.png"
   },
   {
-    "PlayerID": 15122,
+    "PlayerID": 11002,
     "Team": "DET",
     "Number": 94,
     "Name": "Ezekiel Ansah",
     "Position": "DE",
     "College": "BYU",
     "Active": true,
-    "PhotoUrl": "http://static.fantasydata.com/headshots/nfl/low-res/15122.png"
+    "PhotoUrl": "http://static.fantasydata.com/headshots/nfl/low-res/11002.png"
   },
   {
-    "PlayerID": 15123,
+    "PlayerID": 11003,
     "Team": "DET",
     "Number": 10,
     "Name": "Corey Fuller",
     "Position": "WR",
     "College": "Virginia Tech",
     "Active": true,
-    "PhotoUrl": "http://static.fantasydata.com/headshots/nfl/low-res/15123.png"
+    "PhotoUrl": "http://static.fantasydata.com/headshots/nfl/low-res/11003.png"
   },
   {
-    "PlayerID": 15124,
+    "PlayerID": 11004,
     "Team": "DAL",
     "Number": 48,
     "Name": "Brandon Hepburn",
     "Position": "OLB",
     "College": "Florida A&M",
     "Active": true,
-    "PhotoUrl": "http://static.fantasydata.com/headshots/nfl/low-res/15124.png"
+    "PhotoUrl": "http://static.fantasydata.com/headshots/nfl/low-res/11004.png"
   },
   {
-    "PlayerID": 15125,
+    "PlayerID": 11005,
     "Team": "DET",
     "Number": 6,
     "Name": "Sam Martin",
     "Position": "P",
     "College": "Appalachian State",
     "Active": true,
-    "PhotoUrl": "http://static.fantasydata.com/headshots/nfl/low-res/15125.png"
+    "PhotoUrl": "http://static.fantasydata.com/headshots/nfl/low-res/11005.png"
   },
   {
-    "PlayerID": 15126,
+    "PlayerID": 11006,
     "Team": "DET",
     "Number": 25,
     "Name": "Theo Riddick",
     "Position": "RB",
     "College": "Notre Dame",
     "Active": true,
-    "PhotoUrl": "http://static.fantasydata.com/headshots/nfl/low-res/15126.png"
+    "PhotoUrl": "http://static.fantasydata.com/headshots/nfl/low-res/11006.png"
   },
   {
-    "PlayerID": 15127,
+    "PlayerID": 11007,
     "Team": "DET",
     "Number": 23,
     "Name": "Darius Slay",
     "Position": "CB",
     "College": "Mississippi State",
     "Active": true,
-    "PhotoUrl": "http://static.fantasydata.com/headshots/nfl/low-res/15127.png"
+    "PhotoUrl": "http://static.fantasydata.com/headshots/nfl/low-res/11007.png"
   },
   {
-    "PlayerID": 15128,
+    "PlayerID": 11008,
     "Team": "DET",
     "Number": 75,
     "Name": "Larry Warford",
     "Position": "G",
     "College": "Kentucky",
     "Active": true,
-    "PhotoUrl": "http://static.fantasydata.com/headshots/nfl/low-res/15128.png"
+    "PhotoUrl": "http://static.fantasydata.com/headshots/nfl/low-res/11008.png"
   },
   {
-    "PlayerID": 15129,
+    "PlayerID": 11009,
     "Team": "NE",
     "Number": 85,
     "Name": "Michael Williams",
     "Position": "TE",
     "College": "Alabama",
     "Active": true,
-    "PhotoUrl": "http://static.fantasydata.com/headshots/nfl/low-res/15129.png"
+    "PhotoUrl": "http://static.fantasydata.com/headshots/nfl/low-res/11009.png"
   },
   {
     "PlayerID": 15131,
@@ -20990,14 +20990,14 @@ var playerArray = [
     "PhotoUrl": "http://static.fantasydata.com/headshots/nfl/low-res/0.png"
   },
   {
-    "PlayerID": 17512,
+    "PlayerID": 17100,
     "Team": "KC",
     "Number": 99,
     "Name": "Rakeem Nunez-roches",
     "Position": "DE",
     "College": "Southern Mississippi",
     "Active": true,
-    "PhotoUrl": "http://static.fantasydata.com/headshots/nfl/low-res/17512.png"
+    "PhotoUrl": "http://static.fantasydata.com/headshots/nfl/low-res/17100.png"
   },
   {
     "PlayerID": 17521,
